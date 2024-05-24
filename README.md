@@ -34,10 +34,10 @@ Using the library is as simple and convenient as possible:
 
 *Notice:* for the first usage set it empty to get full .json file to see the structure and then you can set your values.
 
-*Examples:*
+Examples:
 
-`start_keyword = 'Муниципальные образования Приморского края`
-`end_keyword = 'Муниципальные образования Ставропольского края`
+    start_keyword = 'Муниципальные образования Приморского края'
+    end_keyword = 'Муниципальные образования Ставропольского края'
 
 You will get all rows between this municipal territories.
 
