@@ -3,6 +3,9 @@
 ## What is this? ##
 Simple and useful parser that helps you get actual All-Russian Classifier of Municipal Territories (OKTMO).
 
+## Install ##
+`pip install oktmoparser`
+
 ## Quick Guide ##
 The parser is based on the following structure:
 
