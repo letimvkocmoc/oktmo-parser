@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='oktmoparser',
-    version='1.1',
+    version='1.2',
     author='letimvkocmoc',
     author_email='letimvkocmoc@gmail.com',
     description='Simple and useful parser that helps you get actual All-Russian Classifier of Municipal Territories (OKTMO)',
@@ -25,10 +25,5 @@ setup(
         'GitGub': 'https://github.com/letimvkocmoc'
     },
     packages=find_packages(),
-    install_requires=['requests'],
-    entry_points={
-        'console_scripts': [
-            'oktmo-parser = oktmo_parser:main'
-        ]
-    }
+    install_requires=['requests']
 )

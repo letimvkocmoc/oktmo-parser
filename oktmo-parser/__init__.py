@@ -1,1 +1,1 @@
-from oktmo import OktmoParser
+from .oktmo import *
