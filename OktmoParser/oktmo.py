@@ -4,7 +4,7 @@ import re
 import requests
 
 
-class OktmoParser:
+class OktmoParser():
 
     def __init__(self):
         self.url = 'https://rosstat.gov.ru/opendata/7708234640-oktmo'
