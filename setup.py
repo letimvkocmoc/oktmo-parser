@@ -7,7 +7,7 @@ def readme():
 
 
 setup(
-    name='oktmo-parser',
+    name='oktmoparser',
     version='1.0',
     author='letimvkocmoc',
     author_email='letimvkocmoc@gmail.com',
