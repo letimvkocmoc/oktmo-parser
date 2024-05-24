@@ -7,11 +7,11 @@ def readme():
 
 
 setup(
-    name='oktmo-parser',
-    version='1.0',
+    name='oktmoparser',
+    version='1.1',
     author='letimvkocmoc',
     author_email='letimvkocmoc@gmail.com',
-    description='Simple and useful parser that helps you can actual All-Russian Classifier of Municipal Territories (OKTMO)',
+    description='Simple and useful parser that helps you get actual All-Russian Classifier of Municipal Territories (OKTMO)',
     long_description=readme(),
     long_description_content_type='text/markdown',
     url='https://github.com/letimvkocmoc/oktmo-parser',

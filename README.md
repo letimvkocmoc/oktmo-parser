@@ -1,7 +1,7 @@
 # All-Russian Classifier of Municipal Territories (OKTMO) Parser #
 
 ## What is this? ##
-Simple and useful parser that helps you to get actual All-Russian Classifier of Municipal Territories (OKTMO).
+Simple and useful parser that helps you get actual All-Russian Classifier of Municipal Territories (OKTMO).
 
 ## Quick Guide ##
 The parser is based on the following structure:
