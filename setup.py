@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='oktmoparser',
-    version='1.3.1',
+    version='1.3.2',
     author='letimvkocmoc',
     author_email='letimvkocmoc@gmail.com',
     description='Simple and useful parser that helps you get actual All-Russian Classifier of Municipal Territories (OKTMO)',
