@@ -34,10 +34,26 @@ class OktmoParser():
                     data_found = False
                     result_data = {}
                     try:
-                        with open('data.csv', newline='', encoding=encoding) as csvfile:
+                        with open('data/csv/data.csv', newline='', encoding=encoding) as csvfile:
                             csvreader = csv.reader(csvfile, delimiter=';')
+
                             for row in csvreader:
-                                if data_found and row[6] != end_keyword:
+                                if start_keyword and end_keyword:
+                                    if row[6] == start_keyword:
+                                        data_found = True
+                                    elif row[6] == end_keyword:
+                                        data_found = False
+                                        break
+                                    if data_found and row[6] != end_keyword:
+                                        oktmo_code = row[0] + ' ' + row[1] + ' ' + row[2]
+                                        if row[3] != '000':
+                                            oktmo_code += ' ' + row[3]
+                                        settlement_name = row[6]
+                                        result_data[settlement_name] = {
+                                            'ОКТМО': oktmo_code,
+                                            'КЧ': row[4]
+                                        }
+                                else:
                                     oktmo_code = row[0] + ' ' + row[1] + ' ' + row[2]
                                     if row[3] != '000':
                                         oktmo_code += ' ' + row[3]
@@ -46,15 +62,11 @@ class OktmoParser():
                                         'ОКТМО': oktmo_code,
                                         'КЧ': row[4]
                                     }
-                                if row[6] == start_keyword:
-                                    data_found = True
-                                elif row[6] == end_keyword:
-                                    data_found = False
-                                    break
+
                     except UnicodeDecodeError:
                         print(f'Не удалось прочитать файл с кодировкой {encoding}')
 
-                    with open('result.json', 'w') as json_file:
+                    with open('data/json/result.json', 'w') as json_file:
                         json.dump(result_data, json_file, ensure_ascii=False, indent=4)
                         print('Готово')
                 else:
