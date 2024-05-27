@@ -1,10 +1,11 @@
+import os
+import re
 import csv
 import json
-import re
 import requests
 
 
-class OktmoParser():
+class OktmoParser:
 
     def __init__(self):
         self.url = 'https://rosstat.gov.ru/opendata/7708234640-oktmo'
@@ -26,7 +27,8 @@ class OktmoParser():
 
                 if file_response.status_code == 200:
 
-                    with open(self.file_name, 'wb') as f:
+                    os.makedirs('data/csv/', exist_ok=True)
+                    with open('data/csv/' + self.file_name, 'wb') as f:
                         f.write(file_response.content)
                     print('Файл успешно загружен, формирую результат в формате JSON')
 
@@ -66,7 +68,8 @@ class OktmoParser():
                     except UnicodeDecodeError:
                         print(f'Не удалось прочитать файл с кодировкой {encoding}')
 
-                    with open('data/json/result.json', 'w') as json_file:
+                    os.makedirs('data/json/', exist_ok=True)
+                    with open('data/json/result.json', 'w', encoding='utf-8') as json_file:
                         json.dump(result_data, json_file, ensure_ascii=False, indent=4)
                         print('Готово')
                 else:
